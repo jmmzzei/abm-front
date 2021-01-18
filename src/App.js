@@ -18,7 +18,6 @@ export const App = () => {
   }, [])
 
   const applyFilter = el => {
-    console.log(el)
     setFilter(el)
   }
 

@@ -19,7 +19,6 @@ export const companiesService = {
       API.patch(companies + id, data)
         .then(res => {
           resolve(res.data)
-          console.log(res.data)
         })
         .catch(err => {
           reject(err)

@@ -8,7 +8,6 @@ export const CompanyForm = ({ name, id, onResult }) => {
     companiesService
       .patch(id, values)
       .then(res => {
-        console.log(values)
         onResult(values.name)
         setSubmitting(false)
       })

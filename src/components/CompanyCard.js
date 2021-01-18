@@ -36,7 +36,6 @@ export const CompanyCard = ({ companyId, name, filter, refetch, onResult }) => {
     let fil = filter && filter.role ? filter.role : 'all'
 
     employeesService.getAll(fil, filter).then(res => {
-      console.log(res)
       setEmployees(res.data.employees)
       setAverage(res.data.average)
       createLabels(filter)
