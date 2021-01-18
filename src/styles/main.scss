@@ -1,0 +1,40 @@
+@import './base/colors';
+@import './base/reset';
+@import './mixins';
+@import './layout/home';
+@import './components/form';
+@import './components/button';
+@import './components/editors';
+@import './components/navbar';
+@import './components/company-card';
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.search-bg-color {
+  background-color: $blue;
+}
+.edit-bg-color {
+  background-color: $indigo;
+}
+.create-bg-color {
+  background-color: $green;
+}
+.detail-bg-color {
+  background-color: $orange;
+}
+
+.search-hover-color:hover {
+  background-color: $blue;
+  color: white;
+}
+.edit-hover-color:hover {
+  background-color: $indigo;
+  color: white;
+}
+.create-hover-color:hover {
+  background-color: $green;
+  color: white;
+}
