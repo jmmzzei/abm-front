@@ -1,0 +1,19 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'navbar '
+    'list '
+    'editors';
+  justify-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'navbar navbar'
+      'list editors';
+  }
+}

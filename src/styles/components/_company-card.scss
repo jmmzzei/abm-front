@@ -1,0 +1,233 @@
+.company-card {
+  border-radius: 10px;
+  text-align: center;
+
+  min-height: 200px;
+  max-height: 470px;
+  position: relative;
+  box-shadow: 0 0 1.4em #00000030;
+  background-color: white;
+  width: 90%;
+  @include hide-scrollbar();
+
+  header {
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    background-color: white;
+    box-shadow: 0 0 1em #00000030;
+
+    p {
+      display: inline;
+    }
+
+    button {
+      float: right;
+      display: inline;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      margin-top: -5px;
+      margin-right: 10px;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(1):hover {
+        background-color: $blue;
+      }
+
+      &:nth-child(3):hover {
+        background-color: $indigo;
+      }
+    }
+
+    .edit {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+
+  footer {
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 0 1em #00000030;
+    background-color: white;
+    padding: 12px;
+
+    button {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: $green;
+      color: white;
+
+      &:hover {
+        background-color: white;
+        box-shadow: 2px 2px 1em #00000060;
+        color: $green;
+      }
+    }
+  }
+
+  & > p {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid lightgray;
+  }
+
+  ul {
+    li {
+      padding: 6px;
+    }
+  }
+}
+
+.company-form {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    display: inline-block;
+    margin: 14px 10px 8px 10px;
+  }
+
+  button {
+    padding: 6px 20px;
+    border-radius: 5px;
+    height: 34px;
+    margin: -10px 4px 10px 4px;
+
+    &:hover {
+      background-color: $indigo;
+    }
+  }
+}
+
+.filter-container {
+  p {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .label-container {
+    padding: 10px 10px;
+    margin-bottom: -10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(110px, 180px));
+    border-bottom: 1px solid lightgray;
+
+    .label {
+      padding: 6px 10px;
+      border-radius: 16px;
+      border: none;
+      background-color: lightgray;
+      margin: 6px;
+    }
+  }
+}
+
+.employee-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 15px;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 1em #00000030;
+
+  div {
+    padding: 8px;
+  }
+  .name-item {
+    width: 110px;
+  }
+  .age-item {
+    width: 50px;
+  }
+  .pro-item {
+    width: 100px;
+  }
+  .space {
+    width: 40px;
+  }
+}
+
+.employee-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 5px 10px;
+  padding: 0;
+
+  .btn-item {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    padding: 0;
+    transition: 0.4s all;
+
+    &:nth-child(1):hover {
+      background-color: $indigo;
+    }
+    &:nth-child(2):hover {
+      background-color: $red;
+    }
+  }
+
+  div {
+    padding: 8px;
+  }
+  .name-item {
+    width: 110px;
+  }
+  .age-item {
+    width: 50px;
+  }
+  .pro-item {
+    width: 100px;
+  }
+  .space {
+    width: 40px;
+  }
+
+  img {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .company-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 900px) {
+  .company-card {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .company-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .company-card {
+    width: 60%;
+  }
+}
