@@ -42,7 +42,6 @@ export const EmployeeForm = ({ onResult, onUpdate }) => {
         employeesService.patch(id, values).then(res => {
           onUpdate(true)
         })
-        resetForm()
         setSubmitting(false)
       },
     }
@@ -77,7 +76,7 @@ export const EmployeeForm = ({ onResult, onUpdate }) => {
     return function cleanup() {
       mounted = false
     }
-  }, [location, editValues])
+  }, [location.pathname])
 
   return (
     <Formik
